@@ -39,3 +39,8 @@ RUN wget https://pear.php.net/install-pear-nozlib.phar
 RUN mv install-pear-nozlib.phar /php-src-php-7.3.0/pear/
 RUN ./configure --prefix=/php-7-bin/ --with-openssl=/usr/local/ssl --with-curl --with-zlib
 RUN make install
+
+RUN /php-7-bin/bin/php -i
+RUN /php-7-bin/bin/php -m
+RUN /php-7-bin/bin/php -v
+
